@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 18, 50, 99;
+  --background-rgb: 251, 253, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb:194, 230, 255;
+    --background-rgb: 13, 21, 32;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/**
+Dark mode colors 
+1 = #0D1520
+2 = #111927
+3 = #0D2847
+4 = #003362
+5 = #004073
+6 = #104D87
+7 = #205D9E
+8 = #2970BD
+9 = #0090FF
+10 = #70B8FF
+11 = #C2E6FF
+
+Light mode colors
+1 = #FBFDFF
+2 = #F4FAFF
+3 = #E6F4FE
+4 = #D5EFFF
+5 = #C2E5FF
+6 = #ACD8FC
+7 = #8EC8F5
+8 = #0090FF
+9 = #0788F0
+10 = #0E74CE
+11 = #123263
+
+https://www.radix-ui.com/colors/docs/palette-composition/understanding-the-scale
+**/
