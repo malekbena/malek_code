@@ -3,77 +3,53 @@
 @tailwind utilities;
 
 :root {
-  --main-bg-primary: 251, 253, 255;
-  --main-bg-secondary: 244, 250, 255;
-  --ui-bg: 230, 244, 254;
-  --ui-hover: 213, 239, 255;
-  --ui-selected: 194, 229, 255;
-  --border: 172, 216, 252;
-  --border-interactive: 142, 200, 246;
-  --border-focus: 94, 177, 239;
-  --solid-bg: 0, 144, 255;
-  --solid-bg-hover: 5, 136, 240;
-  --text-color-secondary: 13, 116, 206;
-  --text-color-primary: 17, 50, 100;
-  --dark-bg: 13, 21, 32;
-  --light-color: 255, 255, 255;
-  --footer-hover: 79, 79, 82;
+  --main-bg: #282a36;
+  --bg-text: #313340;
+  --text-color: #efefef;
+  --accent-color: #bd93f9;
+  --titlebar-bg: #1e1f29;
+  --sidebar-bg: #343746;
+  --sidebar-hover-bg: #3c3d51;
+  --explorer-bg: #21222c;
+  --explorer-hover-bg: #313241;
+  --explorer-border: #161a1d;
+  --tabs-bg: #191a21;
+  --tab-bg: #21222c;
+  --tab-active-bg: #282a36;
+  --tab-border: #191a21;
+  --footer-bg: #191a21;
+  --footer-border: #191a21;
+  --button-bg: #44475a;
+  --button-text: #f8f8f2;
+  --footer-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #282a36;
+  --scrollbar-thumb-bg: #454647;
+  --article-bg: #21222c;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-bg-primary: 13, 21, 32;
-    --main-bg-secondary: 17, 25, 39;
-    --ui-bg: 13, 40, 71;
-    --ui-hover: 0, 51, 98;
-    --ui-selected: 0, 64, 116;
-    --border: 16, 77, 135;
-    --border-interactive: 32, 93, 158;
-    --border-focus: 40, 112, 189;
-    --solid-bg: 0, 144, 255;
-    --solid-bg-hover: 59, 158, 255;
-    --text-color-secondary: 112, 184, 255;
-    --text-color-primary: 194, 230, 255;
+    --main-bg: #282a36;
+    --bg-text: #313340;
+    --text-color: #efefef;
+    --accent-color: #bd93f9;
+    --titlebar-bg: #1e1f29;
+    --sidebar-bg: #343746;
+    --sidebar-hover-bg: #3c3d51;
+    --explorer-bg: #21222c;
+    --explorer-hover-bg: #313241;
+    --explorer-border: #161a1d;
+    --tabs-bg: #191a21;
+    --tab-bg: #21222c;
+    --tab-active-bg: #282a36;
+    --tab-border: #191a21;
+    --footer-bg: #191a21;
+    --footer-border: #191a21;
+    --button-bg: #44475a;
+    --button-text: #f8f8f2;
+    --footer-hover-bg: #4f4f52;
+    --scrollbar-track-bg: #282a36;
+    --scrollbar-thumb-bg: #454647;
+    --article-bg: #21222c;
   }
 }
-
-body {
-  color: rgb(var(--main-bg-primary));
-  background: rgb(var(--text-color-primary));
-}
-main {
-  background: rgb(var(--main-bg-secondary));
-  color: rgb(var(--text-color-primary));
-}
-/**-----Theme colors-----
----Dark mode--- 
-  1: rgb(13, 21, 32);
-  2: rgb(17, 25, 39);
-  3: rgb(13, 40, 71);
-  4: rgb(0, 51, 98);
-  5: rgb(0, 64, 116);
-  6: rgb(16, 77, 135);
-  7: rgb(32, 93, 158);
-  8: rgb(40, 112, 189);
-  9: rgb(0, 144, 255);
-  10: rgb(59, 158, 255);
-  11: rgb(112, 184, 255);
-  12: rgb(194, 230, 255);
-
----Light mode---
-  1: rgb(251, 253, 255);
-  2: rgb(244, 250, 255);
-  3: rgb(230, 244, 254);
-  4: rgb(213, 239, 255);
-  5: rgb(194, 229, 255);
-  6: rgb(172, 216, 252);
-  7: rgb(142, 200, 246);
-  8: rgb(94, 177, 239);
-  9: rgb(0, 144, 255);
-  10: rgb(5, 136, 240);
-  11: rgb(13, 116, 206);
-  12: rgb(17, 50, 100);
-
----Theme colors doc:
-    https://www.radix-ui.com/colors/docs/palette-composition/understanding-the-scale
-**/

@@ -1,7 +1,8 @@
 .footer {
-    background: rgb(var(--dark-bg));
-    color: rgb(var(--light-color));
+    background: var(--footer-bg);
     height: 25px;
+    border-top: 1px solid var(--footer-border);
+    color: rgb(225, 228, 232);
     padding: 0 0.5rem;
     display: flex;
     align-items: center;
@@ -34,5 +35,15 @@
 }
 
 .section:hover {
-    background: rgb(var(--footer-hover));
+    background: var(--footer-hover-bg);
+}
+
+@media screen and (max-width: 600px) {
+    .bottomBar {
+        font-size: 0.6rem;
+    }
+
+    .section {
+        margin-right: 0.5rem;
+    }
 }
