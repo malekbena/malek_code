@@ -12,34 +12,34 @@ import styles from '../styles/Sidebar.module.css';
 const sidebarTopItems = [
     {
         Icon: FilesIcon,
-        path: 'top',
+        path: '#home',
     },
     {
         Icon: GithubIcon,
-        path: 'github',
+        path: '#github',
     },
     {
         Icon: CodeIcon,
-        path: 'projects',
+        path: '#projects',
     },
     {
         Icon: PencilIcon,
-        path: 'articles',
+        path: '#articles',
     },
     {
         Icon: MailIcon,
-        path: 'contact',
+        path: '#contact',
     },
 ];
 
 const sidebarBottomItems = [
     {
         Icon: AccountIcon,
-        path: 'about',
+        path: '#about',
     },
     {
         Icon: SettingsIcon,
-        path: 'settings',
+        path: '#settings',
     },
 ];
 
