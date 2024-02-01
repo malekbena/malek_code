@@ -18,7 +18,10 @@ export default function RootLayout({ children }) {
         <div className={styles.main}>
           <Sidebar />
           <Explorer />
+          <div>
           {children}
+
+          </div>
         </div>
         <Footer />
       </body>

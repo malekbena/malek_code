@@ -53,3 +53,10 @@
     --article-bg: #21222c;
   }
 }
+
+.sections {
+  flex-direction: column;
+}
+.index_section {
+  height: 100vh;
+}

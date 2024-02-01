@@ -4,6 +4,10 @@
     color: rgb(225, 228, 232);
     font-family: 'Source Sans Pro', sans-serif;
     border-right: 1px solid var(--explorer-border);
+    height: calc(100vh - 30px - 25px);
+
+    position: sticky;
+    top: 30px;
 }
 
 .title {

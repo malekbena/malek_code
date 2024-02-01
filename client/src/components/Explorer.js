@@ -8,12 +8,12 @@ import styles from '../styles/Explorer.module.css';
 const explorerItems = [
     {
         name: 'home.jsx',
-        path: '/',
+        path: '#home',
         icon: 'react_icon.svg',
     },
     {
         name: 'about.html',
-        path: 'about',
+        path: '#about',
         icon: 'html_icon.svg',
     },
     {

@@ -6,6 +6,8 @@
     width: 4.5vw;
     min-width: 40px;
     height: calc(100vh - 30px - 25px);
+    position: sticky;
+    top: 30px;
 }
 
 .iconContainer {
