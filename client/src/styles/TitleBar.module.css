@@ -1,11 +1,11 @@
 .titlebar{
-  background: rgb(var(--main-bg-primary));
+  background: rgb(var(--dark-bg));
   height: 30px;
   padding: 0 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: rgb(var(--light-color));
   font-size: 0.85rem;
-  border-bottom: 1px solid #191d20;
+  /* border-bottom: 1px solid #191d20; */
 }

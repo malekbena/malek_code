@@ -15,6 +15,9 @@
   --solid-bg-hover: 5, 136, 240;
   --text-color-secondary: 13, 116, 206;
   --text-color-primary: 17, 50, 100;
+  --dark-bg: 13, 21, 32;
+  --light-color: 255, 255, 255;
+  --footer-hover: 79, 79, 82;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,7 +41,10 @@ body {
   color: rgb(var(--main-bg-primary));
   background: rgb(var(--text-color-primary));
 }
-
+main {
+  background: rgb(var(--main-bg-secondary));
+  color: rgb(var(--text-color-primary));
+}
 /**-----Theme colors-----
 ---Dark mode--- 
   1: rgb(13, 21, 32);

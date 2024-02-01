@@ -1,0 +1,38 @@
+.footer {
+    background: rgb(var(--dark-bg));
+    color: rgb(var(--light-color));
+    height: 25px;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.icon {
+    margin-right: 4px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+    margin-right: 0.5rem;
+    height: 24px;
+    align-items: center;
+    padding: 0 0.2rem;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.section:hover {
+    background: rgb(var(--footer-hover));
+}
