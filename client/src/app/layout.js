@@ -1,6 +1,7 @@
 import TitleBar from '@/components/TitleBar'
 import Footer from '@/components/Footer'
 import Sidebar from '@/components/Sidebar'
+import Explorer from '@/components/Explorer'
 import '../styles/globals.css'
 import styles from '../styles/layout.module.css'
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <TitleBar />
         <div className={styles.main}>
           <Sidebar />
+          <Explorer />
           {children}
         </div>
         <Footer />
