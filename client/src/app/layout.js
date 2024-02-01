@@ -2,6 +2,7 @@ import TitleBar from '@/components/TitleBar'
 import Footer from '@/components/Footer'
 import Sidebar from '@/components/Sidebar'
 import Explorer from '@/components/Explorer'
+import Tabsbar from '@/components/Tabsbar'
 import '../styles/globals.css'
 import styles from '../styles/layout.module.css'
 
@@ -18,9 +19,11 @@ export default function RootLayout({ children }) {
         <div className={styles.main}>
           <Sidebar />
           <Explorer />
-          <div>
-          {children}
-
+          <div style={{ width: '100%' }}>
+            <Tabsbar />
+            <main id="main-editor" className={styles.content}>
+              {children}
+            </main>
           </div>
         </div>
         <Footer />
