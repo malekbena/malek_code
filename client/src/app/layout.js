@@ -1,9 +1,8 @@
-import { Inter } from 'next/font/google'
-import '../styles/globals.css'
 import TitleBar from '@/components/TitleBar'
 import Footer from '@/components/Footer'
-
-const inter = Inter({ subsets: ['latin'] })
+import Sidebar from '@/components/Sidebar'
+import '../styles/globals.css'
+import styles from '../styles/layout.module.css'
 
 export const metadata = {
   title: 'Malek Ben Ali',
@@ -13,9 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <TitleBar />
-        {children}
+        <div className={styles.main}>
+          <Sidebar />
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
