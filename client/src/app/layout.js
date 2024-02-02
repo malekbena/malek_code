@@ -3,8 +3,8 @@ import Footer from '@/components/Footer'
 import Sidebar from '@/components/Sidebar'
 import Explorer from '@/components/Explorer'
 import Tabsbar from '@/components/Tabsbar'
-import '../styles/globals.css'
-import styles from '../styles/layout.module.css'
+import styles from '@/styles/layout.module.css'
+import '@/styles/globals.css'
 
 export const metadata = {
   title: 'Malek Ben Ali',
