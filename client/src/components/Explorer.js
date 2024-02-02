@@ -2,38 +2,38 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import ChevronRight from './icons/Chevronright';
+import ChevronRight from './icons/ChevronRight';
 import styles from '../styles/Explorer.module.css';
 
 const explorerItems = [
     {
         name: 'home.jsx',
-        path: '#home',
+        path: '/',
         icon: 'react_icon.svg',
     },
     {
         name: 'about.html',
-        path: '#about',
+        path: '/about',
         icon: 'html_icon.svg',
     },
     {
         name: 'contact.css',
-        path: '#contact',
+        path: '/contact',
         icon: 'css_icon.svg',
     },
     {
         name: 'projects.js',
-        path: '#projects',
+        path: '/projects',
         icon: 'js_icon.svg',
     },
     {
         name: 'articles.json',
-        path: '#articles',
+        path: '/articles',
         icon: 'json_icon.svg',
     },
     {
         name: 'github.md',
-        path: '#github',
+        path: '/github',
         icon: 'markdown_icon.svg',
     },
 ];

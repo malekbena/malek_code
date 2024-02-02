@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import FilesIcon from './icons/FilesIcon';
 import GithubIcon from './icons/GithubIcon';
@@ -7,43 +8,45 @@ import MailIcon from './icons/MailIcon';
 import AccountIcon from './icons/AccountIcon';
 import SettingsIcon from './icons/SettingsIcon';
 import styles from '../styles/Sidebar.module.css';
+import { usePathname } from 'next/navigation';
 
 
 const sidebarTopItems = [
     {
         Icon: FilesIcon,
-        path: '#home',
+        path: '/',
     },
     {
         Icon: GithubIcon,
-        path: '#github',
+        path: '/github',
     },
     {
         Icon: CodeIcon,
-        path: '#projects',
+        path: '/projects',
     },
     {
         Icon: PencilIcon,
-        path: '#articles',
+        path: '/articles',
     },
     {
         Icon: MailIcon,
-        path: '#contact',
+        path: '/contact',
     },
 ];
 
 const sidebarBottomItems = [
     {
         Icon: AccountIcon,
-        path: '#about',
+        path: '/about',
     },
     {
         Icon: SettingsIcon,
-        path: '#settings',
+        path: '/settings',
     },
 ];
 
-const Sidebar = ({active}) => {
+const Sidebar = () => {
+    const pathname = usePathname();
 
     return (
         <aside className={styles.sidebar}>
@@ -51,12 +54,12 @@ const Sidebar = ({active}) => {
                 {sidebarTopItems.map(({ Icon, path }) => (
                     <Link href={path} key={path}>
                         <div
-                            className={`${styles.iconContainer} ${active === path && styles.active
+                            className={`${styles.iconContainer} ${pathname === path && styles.active
                                 }`}
                         >
                             <Icon
                                 fill={
-                                    active === path
+                                    pathname === path
                                         ? 'rgb(225, 228, 232)'
                                         : 'rgb(106, 115, 125)'
                                 }
@@ -68,11 +71,11 @@ const Sidebar = ({active}) => {
             </div>
             <div className={styles.sidebarBottom}>
                 {sidebarBottomItems.map(({ Icon, path }) => (
-                    <div className={styles.iconContainer}>
-                        <Link href={path} key={path}>
+                    <div className={styles.iconContainer} key={path}>
+                        <Link href={path}>
                             <Icon
                                 fill={
-                                    active === path
+                                    pathname === path
                                         ? 'rgb(225, 228, 232)'
                                         : 'rgb(106, 115, 125)'
                                 }

@@ -5,10 +5,6 @@ export default function Home() {
         <h2>home</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt quia beatae fugit repellendus aliquid qui officiis praesentium nisi. Ut quaerat voluptates at nam magni veritatis dolores nostrum porro laborum neque.</p>
       </section>
-      <section className="index_section" id="about">
-        <h2>About</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt quia beatae fugit repellendus aliquid qui officiis praesentium nisi. Ut quaerat voluptates at nam magni veritatis dolores nostrum porro laborum neque.</p>
-      </section>
     </div>
   )
 }
