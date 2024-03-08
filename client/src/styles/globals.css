@@ -21,7 +21,6 @@
   --scrollbar-track-bg: #282a36;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #21222c;
-  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,4 +48,16 @@
     --scrollbar-thumb-bg: #454647;
     --article-bg: #21222c;
   }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.link{
+  color: var(--text-color);
+  text-decoration: none;
 }

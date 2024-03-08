@@ -64,7 +64,7 @@ const Explorer = () => {
                     style={portfolioOpen ? { display: 'block' } : { display: 'none' }}
                 >
                     {explorerItems.map((item) => (
-                        <Link href={item.path} key={item.name}>
+                        <Link href={item.path} key={item.name} className="link">
                             <div className={styles.file}>
                                 <Image
                                     src={`/${item.icon}`}

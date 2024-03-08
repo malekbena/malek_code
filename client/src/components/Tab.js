@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 const Tab = ({ icon, filename, path }) => {
     const pathname = usePathname();
     return (
-        <Link href={path}>
+        <Link href={path} className="link">
             <div
                 className={`${styles.tab} ${pathname === path && styles.active}`}
                 
