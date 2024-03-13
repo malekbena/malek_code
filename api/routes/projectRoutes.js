@@ -1,9 +1,10 @@
-const express = require('express')
+import express from 'express'
+import projectController from '../controllers/projectController.js'
+
 const router = express.Router()
-const projectController = require('../controllers/projectController')
 
 router.post('/projects', projectController.createProject)
 
 router.get('/projects', projectController.getProjects)
 
-module.exports = router 
+export default router 

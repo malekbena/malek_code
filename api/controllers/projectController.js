@@ -1,6 +1,6 @@
-const projectService = require('../services/projectService')
+import projectService from '../services/projectService.js'
 
-module.exports.createProject = async (req, res) => {
+export const createProject = async (req, res) => {
     try {
         const project = await projectService.createProject(req.body)
         res.status(201).json(project)
@@ -9,7 +9,7 @@ module.exports.createProject = async (req, res) => {
     }
 }
 
-module.exports.getProjects = async (req, res) => {
+export const getProjects = async (req, res) => {
     try {
         const projects = await projectService.getProjects()
         res.status(200).json(projects)
@@ -17,3 +17,5 @@ module.exports.getProjects = async (req, res) => {
         res.status(500).json({ message: error.message })
     }
 }
+
+export default { createProject, getProjects }

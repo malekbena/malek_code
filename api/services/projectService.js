@@ -1,19 +1,9 @@
-const Project = require('../database/models/projectModel')
+import Project from '../database/models/projectModel.js'
 
-module.exports.createProject = async project => {
+export const createProject = async project => {
     try {
-
-        const newProject = new Project(
-            {
-                title: project.body.title,
-                description: project.body.description,
-                link: project.body.link,
-                technologies: project.body.technologies,
-                cover: project.body.cover,
-                images: project.body.images,
-            }
-        )
-        let res = newProject.save()
+        const newProject = new Project(project.body)
+        let res = await newProject.save()
         return res
     } catch (error) {
         console.log('Error in projectService.js: ', error)
@@ -21,7 +11,7 @@ module.exports.createProject = async project => {
     }
 }
 
-module.exports.getProjects = async () => {
+export const getProjects = async () => {
     try {
         let res = await Project.find()
         return res
@@ -30,3 +20,5 @@ module.exports.getProjects = async () => {
         throw new Error(error)
     }
 }
+
+export default { createProject, getProjects }
