@@ -2,7 +2,7 @@ import Project from '../database/models/projectModel.js'
 
 export const createProject = async project => {
     try {
-        const newProject = new Project(project.body)
+        const newProject = new Project(project)
         let res = await newProject.save()
         return res
     } catch (error) {
