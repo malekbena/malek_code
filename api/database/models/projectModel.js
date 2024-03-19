@@ -13,6 +13,10 @@ const projectSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    source_code: {
+        type: String,
+        required: true,
+    },
     technologies: {
         type: Array,
         required: true,
