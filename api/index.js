@@ -13,6 +13,10 @@ app.use(express.json())
 
 app.use('/projects', projectRoutes)
 
+app.get('/', (req, res, next) => {
+    res.send('API is running')
+})
+
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)
 })
