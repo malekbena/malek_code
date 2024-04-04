@@ -159,6 +159,9 @@
   background: transparent;
   cursor: pointer;
 }
+.outlined, a {
+  text-decoration: none;
+}
 
 .button:hover,
 .outlined:hover {

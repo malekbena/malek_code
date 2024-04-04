@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from '../styles/ProjectCard.module.css';
+import Link from 'next/link';
 
 const ProjectCard = ({ project }) => {
     return (
@@ -41,7 +42,9 @@ const ProjectCard = ({ project }) => {
                     >
                         Live Demo
                     </a>
-                    <button className='outlined'>En savoir plus</button>
+                    <Link className='outlined' href={`/projects/${project.title}`}>
+                        En savoir plus
+                    </Link>
                 </div>
             </div>
         </div>
