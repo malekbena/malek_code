@@ -18,4 +18,13 @@ export const getProjects = async (req, res) => {
     }
 }
 
-export default { createProject, getProjects }
+export const getProject = async (req, res) => {
+    try {
+        const project = await projectService.getProject(req.params.id)
+        res.status(200).json(project)
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+}
+
+export default { createProject, getProjects, getProject }

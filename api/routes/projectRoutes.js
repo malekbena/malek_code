@@ -7,4 +7,6 @@ router.post('/projects', projectController.createProject)
 
 router.get('/projects', projectController.getProjects)
 
+router.get('/projects/:id', projectController.getProject)
+
 export default router 

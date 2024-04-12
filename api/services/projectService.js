@@ -21,4 +21,14 @@ export const getProjects = async () => {
     }
 }
 
-export default { createProject, getProjects }
+export const getProject = async (id) => {
+    try {
+        let res = await Project.findById(id).select(['-__v'])
+        return res
+    }catch (error) {
+        console.log('Error in projectService.js: ', error)
+        throw new Error(error)
+    }
+}
+
+export default { createProject, getProjects, getProject }
