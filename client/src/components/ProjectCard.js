@@ -42,7 +42,7 @@ const ProjectCard = ({ project }) => {
                     >
                         Live Demo
                     </a>
-                    <Link className='outlined' href={`/projects/${project.title}`}>
+                    <Link className='outlined' href={`/projects/${project._id}`}>
                         En savoir plus
                     </Link>
                 </div>

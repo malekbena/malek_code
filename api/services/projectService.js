@@ -13,7 +13,7 @@ export const createProject = async project => {
 
 export const getProjects = async () => {
     try {
-        let res = await Project.find()
+        let res = await Project.find().select(['-__v', '-images'])
         return res
     }catch (error) {
         console.log('Error in projectService.js: ', error)

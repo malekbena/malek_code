@@ -13,7 +13,7 @@ const ProjectsPage = async () => {
             <h3>Mes projets</h3>
             <div className={styles.container}>
                 {projects && projects.map((project) => (
-                    <ProjectCard key={project.id} project={project} />
+                    <ProjectCard key={project._id} project={project} />
                 ))}
             </div>
         </>
