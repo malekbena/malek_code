@@ -9,6 +9,10 @@ const projectSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    full_description: {
+        type: String,
+        required: true,
+    },
     link: {
         type: String,
         required: true,

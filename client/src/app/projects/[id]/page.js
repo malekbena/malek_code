@@ -15,6 +15,7 @@ const ProjectPage = async ({ params }) => {
             <EmblaCarousel images={images} />
             <h4> {project.title} </h4>
             <p> {project.description} </p>
+            <p> {project.full_description} </p>
             <div className='tags'>
                 {project.technologies.map((tag) => (
                     <span key={tag} className={tag}>
