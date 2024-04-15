@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => {
             <div className={styles.content}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <div className={styles.tags}>
+                <div className={'tags'}>
                     {project.technologies.map((tag) => (
                         <span key={tag} className={tag}>
                             {tag}

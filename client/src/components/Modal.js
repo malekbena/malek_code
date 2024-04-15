@@ -1,12 +1,30 @@
 'use client'
+import ReactModal from 'react-modal'
+import { useRouter } from 'next/navigation'
+import Styles from '@/styles/Modal.module.css'
 
-import Image from 'next/image'
+const ModalProject = ({ children }) => {
+    const router = useRouter()
 
-const ModalProject = ({ project }) => {
+    const handleClose = () => {
+        router.back()
+    }
+
     return (
-        <div>
-            <h1>Modal</h1>
-        </div>
+        <ReactModal
+            isOpen={true}
+            contentLabel="Minimal Modal Example"
+            shouldCloseOnOverlayClick={true}
+            shouldCloseOnEsc={true}
+            onRequestClose={() => handleClose()}
+            className={Styles.modal}
+            ariaHideApp={false}
+        >
+            {children}
+            <button className='outlined' onClick={() => handleClose()}>
+                Retour
+            </button>
+        </ReactModal>
     )
 }
 

@@ -12,8 +12,23 @@ const projectModal = async ({params}) => {
     const project = await findProject(params.id)
     return (
         <Modal>
-            <Image src={project.cover} height={300} alt="" />
-            <h1>Modal</h1>
+            <Image
+                src={project.cover}
+                height={0}
+                width={400}
+                alt=""
+                style={{ width: 'auto', height: 'auto' }}
+            
+            />
+            <h4> {project.title} </h4>
+            <p> {project.description} </p>
+            <div className='tags'>
+                {project.technologies.map((tag) => (
+                    <span key={tag} className={tag}>
+                        {tag}
+                    </span>
+                ))}
+            </div>
         </Modal>
     );
 }

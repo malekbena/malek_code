@@ -63,6 +63,21 @@
 }
 
 /* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 1rem;
+}
+
+.tags span {
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
 .react {
   border: 0.1rem solid rgb(97, 218, 251);
 }
