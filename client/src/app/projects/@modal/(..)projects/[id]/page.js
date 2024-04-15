@@ -1,6 +1,6 @@
 import Modal from '@/components/Modal'
 import EmblaCarousel from '@/components/Carousel'
-import styles from '@/styles/ProjectsPage.module.css'
+import styles from '@/styles/ProjectPage.module.css'
 
 const getProject = async (id) => {
     const res = await fetch(`${process.env.API_URL}/projects/projects/${id}`)

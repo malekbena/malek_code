@@ -1,6 +1,6 @@
 import EmblaCarousel from '@/components/Carousel'
 import Link from 'next/link'
-import styles from '@/styles/ProjectsPage.module.css'
+import styles from '@/styles/ProjectPage.module.css'
 
 
 const getProject = async (id) => {
@@ -13,7 +13,10 @@ const ProjectPage = async ({ params }) => {
     const images = [project.cover, ...project.images]
     return (
         <>
+            <div className={styles.container}>
+
             <EmblaCarousel images={images} />
+            </div>
             <h4 className={styles.project__title}> {project.title} </h4>
             <p className={styles.project__subtitle}> {project.description} </p>
             <p> {project.full_description} </p>
