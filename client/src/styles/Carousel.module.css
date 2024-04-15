@@ -1,0 +1,16 @@
+.embla__viewport {
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+    height: 25vh;
+    width: 25vw;
+}
+
+.embla__slide {
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 100%;
+    min-width: 0;
+}

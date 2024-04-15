@@ -1,11 +1,10 @@
-const findProject = async (id) => {
-    const res = await fetch(`${process.env.API_URL}/projects/projects`)
-    const projects = await res.json()
-    const project = projects.find((project) => project._id === id)
+const getProject = async (id) => {
+    const res = await fetch(`${process.env.API_URL}/projects/projects/${id}`)
+    const project = await res.json()
     return project
 }
 const ProjectPage = async({ params }) => {
-    const project = await findProject(params.id)
+    const project = await getProject(params.id)
     return (
         <div>
             <h1>
