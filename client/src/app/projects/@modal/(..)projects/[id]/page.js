@@ -22,8 +22,26 @@ const projectModal = async ({ params }) => {
                     </span>
                 ))}
             </div>
-            
-
+            <div className='cta'>
+                {project.source_code && (
+                    <a
+                        href={project.source_code}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={"underline"}
+                    >
+                        Code Source
+                    </a>
+                )}
+                <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={"underline"}
+                >
+                    Live Demo
+                </a>
+            </div>
         </Modal>
     );
 }
