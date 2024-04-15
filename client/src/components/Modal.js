@@ -21,9 +21,11 @@ const ModalProject = ({ children }) => {
             ariaHideApp={false}
         >
             {children}
-            <button className='outlined' onClick={() => handleClose()}>
-                Retour
-            </button>
+            <div className={Styles.modal__footer}>
+                <button className="outlined" onClick={() => handleClose()}>
+                    Retour aux projets
+                </button>
+            </div>
         </ReactModal>
     )
 }

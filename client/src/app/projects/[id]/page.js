@@ -1,4 +1,5 @@
 import EmblaCarousel from '@/components/Carousel'
+import Link from 'next/link'
 
 
 const getProject = async (id) => {
@@ -40,6 +41,9 @@ const ProjectPage = async ({ params }) => {
                 >
                     Live Demo
                 </a>
+                <Link className='outlined' href={`/projects`}>
+                        Voir tous les projets
+                    </Link>
             </div>
         </>
     )
