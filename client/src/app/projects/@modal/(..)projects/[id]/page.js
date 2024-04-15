@@ -1,5 +1,6 @@
 import Modal from '@/components/Modal'
 import EmblaCarousel from '@/components/Carousel'
+import styles from '@/styles/ProjectsPage.module.css'
 
 const getProject = async (id) => {
     const res = await fetch(`${process.env.API_URL}/projects/projects/${id}`)
@@ -13,8 +14,8 @@ const projectModal = async ({ params }) => {
     return (
         <Modal>
             <EmblaCarousel images={images} />
-            <h4> {project.title} </h4>
-            <p> {project.description} </p>
+            <h4 className={styles.project__title}> {project.title} </h4>
+            <p className={styles.project__subtitle}> {project.description} </p>
             <p> {project.full_description} </p>
             <div className='tags'>
                 {project.technologies.map((tag) => (
