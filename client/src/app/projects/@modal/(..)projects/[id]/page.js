@@ -1,6 +1,7 @@
 import Modal from '@/components/Modal'
 import EmblaCarousel from '@/components/Carousel'
 import { ExternalLink } from '@/components/Buttons'
+import Tags from '@/components/Tags'
 import styles from '@/styles/ProjectPage.module.css'
 
 const getProject = async (id) => {
@@ -18,13 +19,7 @@ const projectModal = async ({ params }) => {
             <h4 className={styles.project__title}> {project.title} </h4>
             <p className={styles.project__subtitle}> {project.description} </p>
             <p> {project.full_description} </p>
-            <div className='tags'>
-                {project.technologies.map((tag) => (
-                    <span key={tag} className={tag}>
-                        {tag}
-                    </span>
-                ))}
-            </div>
+            <Tags tags={project.technologies} />
             <div className='cta'>
                 {project.source_code && (
                     <ExternalLink text='Code Source' href={project.source_code} />

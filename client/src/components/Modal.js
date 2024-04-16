@@ -14,7 +14,7 @@ const ModalProject = ({ children }) => {
     return (
         <ReactModal
             isOpen={true}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Project Modal"
             shouldCloseOnOverlayClick={true}
             shouldCloseOnEsc={true}
             onRequestClose={() => handleClose()}

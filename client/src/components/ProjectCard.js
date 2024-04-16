@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { CustomLink, ExternalLink } from './Buttons';
+import { CustomLink, ExternalLink } from '@/components/Buttons';
+import Tags from '@/components/Tags';
 import styles from '../styles/ProjectCard.module.css';
 
 const ProjectCard = ({ project }) => {
@@ -17,13 +17,7 @@ const ProjectCard = ({ project }) => {
             <div className={styles.content}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <div className={'tags'}>
-                    {project.technologies.map((tag) => (
-                        <span key={tag} className={tag}>
-                            {tag}
-                        </span>
-                    ))}
-                </div>
+                <Tags tags={project.technologies} />
                 <div className={"cta"}>
                     {project.source_code && (
                     <ExternalLink text='Code Source' href={project.source_code} />
