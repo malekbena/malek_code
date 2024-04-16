@@ -1,6 +1,7 @@
 'use client'
 import ReactModal from 'react-modal'
 import { useRouter } from 'next/navigation'
+import { Button } from '@/components/Buttons'
 import Styles from '@/styles/Modal.module.css'
 
 const ModalProject = ({ children }) => {
@@ -22,9 +23,10 @@ const ModalProject = ({ children }) => {
         >
             {children}
             <div className={Styles.modal__footer}>
-                <button className="outlined" onClick={() => handleClose()}>
-                    Retour aux projets
-                </button>
+                <Button
+                    text='Retour aux projets'
+                    onClick={() => handleClose()}
+                />
             </div>
         </ReactModal>
     )

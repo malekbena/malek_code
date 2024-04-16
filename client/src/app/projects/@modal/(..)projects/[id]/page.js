@@ -1,5 +1,6 @@
 import Modal from '@/components/Modal'
 import EmblaCarousel from '@/components/Carousel'
+import { ExternalLink } from '@/components/Buttons'
 import styles from '@/styles/ProjectPage.module.css'
 
 const getProject = async (id) => {
@@ -26,23 +27,9 @@ const projectModal = async ({ params }) => {
             </div>
             <div className='cta'>
                 {project.source_code && (
-                    <a
-                        href={project.source_code}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={"underline"}
-                    >
-                        Code Source
-                    </a>
+                    <ExternalLink text='Code Source' href={project.source_code} />
                 )}
-                <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={"underline"}
-                >
-                    Live Demo
-                </a>
+                <ExternalLink text='Live Demo' href={project.link} />
             </div>
         </Modal>
     );

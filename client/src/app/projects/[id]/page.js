@@ -1,5 +1,5 @@
 import EmblaCarousel from '@/components/Carousel'
-import Link from 'next/link'
+import { CustomLink, ExternalLink } from '@/components/Buttons'
 import styles from '@/styles/ProjectPage.module.css'
 
 
@@ -15,7 +15,7 @@ const ProjectPage = async ({ params }) => {
         <>
             <div className={styles.container}>
 
-            <EmblaCarousel images={images} />
+                <EmblaCarousel images={images} />
             </div>
             <h4 className={styles.project__title}> {project.title} </h4>
             <p className={styles.project__subtitle}> {project.description} </p>
@@ -29,26 +29,10 @@ const ProjectPage = async ({ params }) => {
             </div>
             <div className='cta'>
                 {project.source_code && (
-                    <a
-                        href={project.source_code}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={"underline"}
-                    >
-                        Code Source
-                    </a>
+                    <ExternalLink text='Code Source' href={project.source_code} />
                 )}
-                <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={"underline"}
-                >
-                    Live Demo
-                </a>
-                <Link className='outlined' href={`/projects`}>
-                        Voir tous les projets
-                    </Link>
+                <ExternalLink text='Live Demo' href={project.link} />
+                <CustomLink text='Voir tous les projets' href={`/projects`} />
             </div>
         </>
     )

@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import styles from '../styles/ProjectCard.module.css';
 import Link from 'next/link';
+import { CustomLink, ExternalLink } from './Buttons';
+import styles from '../styles/ProjectCard.module.css';
 
 const ProjectCard = ({ project }) => {
     return (
@@ -25,26 +26,10 @@ const ProjectCard = ({ project }) => {
                 </div>
                 <div className={"cta"}>
                     {project.source_code && (
-                        <a
-                            href={project.source_code}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={"underline"}
-                        >
-                            Code Source
-                        </a>
+                    <ExternalLink text='Code Source' href={project.source_code} />
                     )}
-                    <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={"underline"}
-                    >
-                        Live Demo
-                    </a>
-                    <Link className='outlined' href={`/projects/${project._id}`}>
-                        En savoir plus
-                    </Link>
+                    <ExternalLink text='Live Demo' href={project.link} />
+                    <CustomLink text='En savoir plus' href={`/projects/${project._id}`} />
                 </div>
             </div>
         </div>
