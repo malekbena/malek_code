@@ -1,6 +1,7 @@
 import express from 'express'
 import dbConnection from './database/connection.js'
 import projectRoutes from './routes/projectRoutes.js'
+import mailRoutes from './routes/mailRoutes.js'
 
 
 
@@ -12,6 +13,7 @@ dbConnection()
 app.use(express.json())
 
 app.use('/projects', projectRoutes)
+app.use('/email', mailRoutes)
 
 app.get('/', (req, res, next) => {
     res.send('API is running')
