@@ -19,8 +19,8 @@ export const sendMail = async (body) => {
             from: '<malekb.benali@gmail.com>',
             to: "malekb.benali@gmail.com",
             subject: "Email from Portfolio",
-            text: `Message from : ${body.from} / Content : ${body.message}`,
-            html: `Message from ${body.from}<br> Content : <br> ${body.message}`
+            text: `Message from : ${body.name} / Email : ${body.email} / Subject : ${body.subject} / Message : ${body.message}`,
+            html: `Message from : ${body.name}<br> Email : ${body.email} <br> Subject : ${body.subject} <br> Message :<br/> ${body.message}`
         })
         return info
     } catch (error) {
