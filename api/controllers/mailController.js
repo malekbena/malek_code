@@ -2,7 +2,6 @@ import mailService from '../services/mailService.js'
 
 export const sendMail = async (req, res) => {
     try {
-        console.log(req)
         const mail = await mailService.sendMail(req.body)
         res.status(200).json({ message: 'Mail sent successfully' })
     } catch (error) {
