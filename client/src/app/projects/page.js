@@ -2,7 +2,7 @@ import ProjectCard from '@/components/ProjectCard'
 import styles from '@/styles/ProjectsPage.module.css'
 
 async function getProjects() {
-    const res = await fetch(`${process.env.API_URL}/projects/projects`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects/projects`)
     const projects = await res.json()
     return projects
 }

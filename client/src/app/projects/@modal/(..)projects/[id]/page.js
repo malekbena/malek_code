@@ -5,7 +5,7 @@ import Tags from '@/components/Tags'
 import styles from '@/styles/ProjectPage.module.css'
 
 const getProject = async (id) => {
-    const res = await fetch(`${process.env.API_URL}/projects/projects/${id}`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects/projects/${id}`)
     const project = await res.json()
     return project
 }

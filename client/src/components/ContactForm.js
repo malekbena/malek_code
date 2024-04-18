@@ -10,8 +10,7 @@ const FormContact = () => {
 
     const submitForm = async (e) => {
         e.preventDefault()
-        console.log(process.env.API_URL)
-        const res = await fetch(`${process.env.API_URL}/email/send`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/email/send`, {
             method: 'POST',
             body: JSON.stringify({ name, email, subject, message }),
         })
