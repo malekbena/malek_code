@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import dbConnection from './database/connection.js'
 import projectRoutes from './routes/projectRoutes.js'
 import mailRoutes from './routes/mailRoutes.js'
@@ -11,6 +12,13 @@ const PORT = process.env.PORT || 3001
 dbConnection()
 
 app.use(express.json())
+app.use(cors({
+    origin: '*',
+    methods: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    accessControlAllowOrigin: '*',
+    credentials: true,
+}))
 
 app.use('/projects', projectRoutes)
 app.use('/email', mailRoutes)
