@@ -25,3 +25,10 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media screen and (max-width: 600px) {
+    .card__links {
+        flex-direction: column-reverse;
+        gap: 0.8rem;
+    }   
+}
