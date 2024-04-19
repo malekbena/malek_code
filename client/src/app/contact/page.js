@@ -6,11 +6,11 @@ const ContactPage = () => {
     return (
         <div className={styles.container}>
             <div>
-                <h3 className={styles.heading}>Reach Out Via Socials</h3>
+                <h3 className={styles.heading}>Contactez-moi Via Mes réseaux</h3>
                 <ContactCode />
             </div>
             <div>
-                <h3 className={styles.heading}>Or Fill Out This Form</h3>
+                <h3 className={styles.heading}>Ou Remplissez Ce Formulaire</h3>
                 <ContactForm />
             </div>
         </div>
