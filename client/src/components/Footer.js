@@ -13,7 +13,7 @@ const Footer = () => {
         <footer className={styles.footer}>
             <div className={styles.container}>
                 <a
-                    href="#"
+                    href="https://github.com/malekbena/malek_code"
                     target="_blank"
                     rel="noreferrer noopener"
                     className={styles.section}

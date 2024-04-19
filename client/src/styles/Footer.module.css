@@ -41,7 +41,7 @@
 }
 
 @media screen and (max-width: 600px) {
-    .bottomBar {
+    .footer {
         font-size: 0.6rem;
     }
 
