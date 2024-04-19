@@ -18,8 +18,20 @@ const ModalProject = ({ children }) => {
             shouldCloseOnOverlayClick={true}
             shouldCloseOnEsc={true}
             onRequestClose={() => handleClose()}
-            className={Styles.modal}
             ariaHideApp={false}
+            style={{
+                content: {
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    backgroundColor: "var(--main-bg)",
+                    color: "var(--text-color)",
+                    padding: " 1rem",
+                    height: "80%",
+                    width: "80%",
+                }
+            }}
         >
             {children}
             <div className={Styles.modal__footer}>
