@@ -22,11 +22,13 @@ const ProjectPage = async ({ params }) => {
             <p className={styles.project__subtitle}> {project.description} </p>
             <p> {project.full_description} </p>
             <Tags tags={project.technologies} />
-            <div className='cta'>
-                {project.source_code && (
-                    <ExternalLink text='Code Source' href={project.source_code} />
-                )}
-                <ExternalLink text='Live Demo' href={project.link} />
+            <div className={styles.project__links}>
+                <div className='cta'>
+                    {project.source_code && (
+                        <ExternalLink text='Code Source' href={project.source_code} />
+                    )}
+                    <ExternalLink text='Live Demo' href={project.link} />
+                </div>
                 <CustomLink text='Voir tous les projets' href={`/projects`} />
             </div>
         </>

@@ -5,13 +5,21 @@
     display: flex;
     justify-content: center;
 }
+
 .project__title {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
+
 .project__subtitle {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
+}
+
+.project__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

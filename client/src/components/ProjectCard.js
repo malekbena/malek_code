@@ -18,11 +18,13 @@ const ProjectCard = ({ project }) => {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <Tags tags={project.technologies} />
-                <div className={"cta"}>
-                    {project.source_code && (
-                    <ExternalLink text='Code Source' href={project.source_code} />
-                    )}
-                    <ExternalLink text='Live Demo' href={project.link} />
+                <div className={styles.card__links}>
+                    <div className={"cta"}>
+                        {project.source_code && (
+                            <ExternalLink text='Code Source' href={project.source_code} />
+                        )}
+                        <ExternalLink text='Live Demo' href={project.link} />
+                    </div>
                     <CustomLink text='En savoir plus' href={`/projects/${project._id}`} />
                 </div>
             </div>

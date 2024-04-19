@@ -43,3 +43,10 @@
 .underline:hover {
     background-size: 100% 88%;
 }
+
+@media screen and (max-width: 600px) {
+    .outlined{
+        font-size: 0.9rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
