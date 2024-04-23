@@ -1,14 +1,12 @@
-.embla__viewport {
-    overflow: hidden;
+.carousel_container {
+    margin : 0 auto;
+    max-width : 1000px;
 }
 
-.embla__container {
-    display: flex;
+@media screen and (max-width: 768px) {
+    .carousel_container {
+        max-width: 80%;
+    }
+    
 }
 
-.embla__slide {
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 100%;
-    min-width: 0;
-}
