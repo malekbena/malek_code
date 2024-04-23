@@ -19,8 +19,7 @@ const ProjectPage = async ({ params }) => {
                 <Carousel images={images} />
             </div>
             <h4 className={styles.project__title}> {project.title} </h4>
-            <p className={styles.project__subtitle}> {project.description} </p>
-            <p> {project.full_description} </p>
+            <p className={styles.project__text}> {project.full_description} </p>
             <Tags tags={project.technologies} />
             <div className={styles.project__links}>
                 <div className='cta'>
@@ -29,7 +28,7 @@ const ProjectPage = async ({ params }) => {
                     )}
                     <ExternalLink text='Live Demo' href={project.link} />
                 </div>
-                <CustomLink text='Voir tous les projets' href={`/projects`} />
+                <CustomLink text='Voir tous les projets' outlined href={`/projects`} />
             </div>
         </>
     )

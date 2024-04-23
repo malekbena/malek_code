@@ -25,7 +25,7 @@ const ProjectCard = ({ project }) => {
                         )}
                         <ExternalLink text='Live Demo' href={project.link} />
                     </div>
-                    <CustomLink text='En savoir plus' href={`/projects/${project._id}`} />
+                    <CustomLink text='En savoir plus' outlined href={`/projects/${project._id}`} />
                 </div>
             </div>
         </div>

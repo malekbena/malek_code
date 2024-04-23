@@ -17,14 +17,13 @@ const projectModal = async ({ params }) => {
         <Modal>
             <Carousel images={images} />
             <h4 className={styles.project__title}> {project.title} </h4>
-            <p className={styles.project__subtitle}> {project.description} </p>
             <p> {project.full_description} </p>
             <Tags tags={project.technologies} />
             <div className='cta'>
                 {project.source_code && (
                     <ExternalLink text='Code Source' href={project.source_code} />
                 )}
-                <ExternalLink text='Live Demo' href={project.link} />
+                <ExternalLink text='Live Demo' outlined href={project.link} />
             </div>
         </Modal>
     );

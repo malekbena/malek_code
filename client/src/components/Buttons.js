@@ -7,11 +7,11 @@ export const Button = ({ text, onClick }) => {
     )
 }
 
-export const CustomLink = ({ text, href }) => {
+export const CustomLink = ({ text, href, outlined }) => {
     return (
         <Link
             href={href}
-            className={styles.outlined}
+            className={outlined ? styles.outlined : styles.button}
         >
             {text}
         </Link>

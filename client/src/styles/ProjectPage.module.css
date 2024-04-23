@@ -12,8 +12,8 @@
     margin-bottom: 0.5rem;
 }
 
-.project__subtitle {
-    font-size: 1.5rem;
+.project__text {
+    font-size: 1rem;
     font-weight: 400;
     margin-bottom: 1rem;
 }
@@ -29,4 +29,10 @@
         flex-direction: column;
         gap: 0.8rem;
     }   
+    .project__title {
+        font-size: 1rem;
+    }
+    .project__text {
+        font-size: 0.8rem;
+    }
 }
