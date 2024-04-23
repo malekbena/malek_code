@@ -5,8 +5,8 @@
 
 @media screen and (max-width: 768px) {
     .carousel_container {
-        max-width: 80%;
+        max-width: 200px;
+        margin-bottom: 30px;
     }
-    
 }
 

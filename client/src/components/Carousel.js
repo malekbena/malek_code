@@ -29,7 +29,6 @@ const Carousel = ({ images }) => {
                             layout="responsive"
 
                         />
-
                     </div>
                 ))
             }
