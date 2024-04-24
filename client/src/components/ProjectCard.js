@@ -19,13 +19,13 @@ const ProjectCard = ({ project }) => {
                 <p>{project.description}</p>
                 <Tags tags={project.technologies} />
                 <div className={styles.card__links}>
+                        <CustomLink text='En savoir plus' outlined href={`/projects/${project._id}`} />
                     <div className={"cta"}>
                         {project.source_code && (
                             <ExternalLink text='Code Source' href={project.source_code} />
                         )}
                         <ExternalLink text='Live Demo' href={project.link} />
                     </div>
-                    <CustomLink text='En savoir plus' outlined href={`/projects/${project._id}`} />
                 </div>
             </div>
         </div>
