@@ -1,9 +1,12 @@
 .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: center;
+    max-width: 50%;
+}
+.carousel {
+    max-width: 100%;
+    overflow: hidden;
+}
+.modal_carousel {
+    max-width: 100%;
 }
 
 .project__title {
@@ -20,15 +23,12 @@
 
 .project__links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 @media screen and (max-width: 600px) {
-    .project__links {
-        flex-direction: column;
-        gap: 0.8rem;
-    }   
     .project__title {
         font-size: 1rem;
     }

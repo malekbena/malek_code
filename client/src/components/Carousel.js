@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Image from "next/image"
 import styles from '@/styles/Carousel.module.css'
+import {NextBtn, PrevBtn} from '@/components/Buttons'
 
 const Carousel = ({ images }) => {
     const settings = {
@@ -13,6 +14,8 @@ const Carousel = ({ images }) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         adaptiveHeight: true,
+        nextArrow: <NextBtn />,
+        prevArrow: <PrevBtn />
     }
 
     return (

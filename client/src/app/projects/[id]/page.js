@@ -13,9 +13,8 @@ const ProjectPage = async ({ params }) => {
     const project = await getProject(params.id)
     const images = [project.cover, ...project.images]
     return (
-        <>
-            <div className={styles.container}>
-
+        <div className={styles.container}>
+            <div className={styles.carousel}>
                 <Carousel images={images} />
             </div>
             <h4 className={styles.project__title}> {project.title} </h4>
@@ -30,7 +29,7 @@ const ProjectPage = async ({ params }) => {
                 </div>
                 <CustomLink text='Voir tous les projets' outlined href={`/projects`} />
             </div>
-        </>
+        </div>
     )
 }
 

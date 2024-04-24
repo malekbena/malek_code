@@ -15,7 +15,9 @@ const projectModal = async ({ params }) => {
     const images = [project.cover, ...project.images]
     return (
         <Modal>
+            <div className={styles.modal_carousel}>
             <Carousel images={images} />
+            </div>
             <h4 className={styles.project__title}> {project.title} </h4>
             <p> {project.full_description} </p>
             <Tags tags={project.technologies} />
