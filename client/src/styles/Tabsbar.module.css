@@ -10,9 +10,8 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .tabs {
         display: none;
-        /* width: 89.5vw; */
     }
 }
