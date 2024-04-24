@@ -27,8 +27,8 @@ const Carousel = ({ images }) => {
                         <Image
                             src={image}
                             alt={`slide ${index}`}
-                            width={800}
-                            height={400}
+                            width={1920}
+                            height={1080}
                             layout="responsive"
 
                         />

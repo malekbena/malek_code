@@ -1,9 +1,9 @@
 .container {
-    max-width: 50%;
+    max-width: 70vw;
 }
 .carousel {
     max-width: 100%;
-    overflow: hidden;
+    margin-bottom: 2rem;
 }
 .modal_carousel {
     max-width: 100%;

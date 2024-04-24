@@ -52,6 +52,7 @@
     top: 50%;
     transform: translateY(-50%);
     color: var(--main-bg);
+    cursor: pointer;
 }
 .carousel_next {
     right: -25px;
