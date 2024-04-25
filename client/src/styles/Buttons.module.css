@@ -51,7 +51,7 @@
     z-index: 100;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--main-bg);
+    color: var(--button-bg);
     cursor: pointer;
 }
 .carousel_next {
@@ -65,5 +65,14 @@
     .outlined{
         font-size: 0.9rem;
         padding: 0.2rem 0.5rem;
+    }
+    .carousel_button {
+        height: 30px;
+    }
+    .carousel_next {
+        right: -5px;
+    }
+    .carousel_prev {
+        left: -5px;
     }
 }
